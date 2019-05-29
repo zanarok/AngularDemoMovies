@@ -1,0 +1,9 @@
+<div class="container">
+    <img [src]="movie.imageUrl"/>
+    <div class="information">
+        <div class="title">{{movie.title}}</div>
+        <div class="genreList">
+            <span *ngFor="let genre of movie.genres">{{genre.name}}</span>
+        </div>
+    </div>
+</div>
