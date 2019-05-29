@@ -15,7 +15,8 @@ import Movie from '../models/Movie';
             <div class="noItemsMessage">There are no movies for which the selected criteria are true</div>
         </ng-template>
     </div>
-    `
+    `,
+    styleUrls: ['./movie-list.style.scss']
 })
 export class MovieListCompotent {
     private movies = new Array<Movie>();
