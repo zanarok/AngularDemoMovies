@@ -1,6 +1,7 @@
 <div class="container">
     <img [src]="movie.imageUrl"/>
     <div class="information">
+        <stars [rating]="movie.voteAverage"></stars>
         <div class="title">{{movie.title}}</div>
         <div class="genreList">
             <span *ngFor="let genre of movie.genres">{{genre.name}}</span>

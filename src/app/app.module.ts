@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MovieListCompotent } from './components/movie-list.component';
 import { MovieComponent } from './components/movie.component';
+import { FilterComponent } from './components/filter.component';
+import { StarRatingComponent } from './components/star-rating.component';
 
 import TmdbApiService from './services/tmdb-api.service';
 
@@ -13,7 +15,9 @@ import TmdbApiService from './services/tmdb-api.service';
   declarations: [
     AppComponent,
     MovieListCompotent,
-    MovieComponent
+    MovieComponent,
+    StarRatingComponent,
+    FilterComponent
   ],
   imports: [
     HttpClientModule,

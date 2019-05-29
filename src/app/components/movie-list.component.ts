@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import TmdbApiService from '../services/tmdb-api.service';
 import Movie from '../models/Movie';
 
@@ -7,6 +7,7 @@ import Movie from '../models/Movie';
     template: `
     <div class="container">
         <div class="title">Movies Now Playing</div>
+        <filter [rating]="minimumRating" (filterChange)="filterMoviesMinimumRating($event)"></filter>
         <div class="listContainer" *ngIf="movies.length > 0 else elseBlock">
             <movie *ngFor="let movie of movies" [movie]="movie"></movie>
         </div>
@@ -24,6 +25,11 @@ export class MovieListCompotent {
     }
 
     public ngOnInit(): void {
+        this.getMovies();
+    }
+
+    private filterMoviesMinimumRating(minimumRating:number) {
+        this.minimumRating = minimumRating;
         this.getMovies();
     }
 
